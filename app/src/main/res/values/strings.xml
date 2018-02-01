@@ -1,4 +1,37 @@
 <resources>
     <string name="app_name">IQ Quiz</string>
+    <string name="number1">1.</string>
+    <string name="number2">2.</string>
+    <string name="number3">3.</string>
+    <string name="number4">4.</string>
+    <string name="number5">5.</string>
     <string name="header">Hello, This is an IQ quiz\nWhat is the next of the following\n Arithmetic Sequences</string>
+
+    <string name="question1">2, 10, 12, 60, 62, 310, ...</string>
+    <string name="question1_choice1">312</string>
+    <string name="question1_choice2">360</string>
+    <string name="question1_choice3">1550</string>
+    <string name="question1_choice4">4650</string>
+
+    <string name="question2">-2, 5, -4, 3, -6, ...</string>
+    <string name="question2_choice1">0</string>
+    <string name="question2_choice2">1</string>
+    <string name="question2_choice3">-3</string>
+    <string name="question2_choice4">-4</string>
+
+    <string name="question3">1, 4, 9, 16, 25, ...</string>
+    <string name="question3_choice1">29</string>
+    <string name="question3_choice2">33</string>
+    <string name="question3_choice3">36</string>
+    <string name="question3_choice4">42</string>
+
+    <string name="question4">Which of the following can be arranged into a 5-letter English word?</string>
+    <string name="question4_choice1">H R G S T</string>
+    <string name="question4_choice2">R I L S A</string>
+    <string name="question4_choice3">T O O M T</string>
+    <string name="question4_choice4">W Q R G S</string>
+
+    <string name="question5">What is the distance between earth and sun?</string>
+    <string name="question5_hint">In Million</string>
+
 </resources>

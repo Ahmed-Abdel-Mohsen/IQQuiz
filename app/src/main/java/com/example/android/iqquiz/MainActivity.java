@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -14,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private RadioButton selected;
     private TextView solutions;
+    private CheckBox checkBox1;
+    private CheckBox checkBox2;
+    private CheckBox checkBox3;
+    private CheckBox checkBox4;
+    private EditText free_answer;
     private int score;
 
     @Override
@@ -82,34 +89,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Question4() {
-        radioGroup = (RadioGroup) findViewById(R.id.radio_group_4);
+        checkBox1 = (CheckBox) findViewById(R.id.q4_choice1);
+        checkBox2 = (CheckBox) findViewById(R.id.q4_choice2);
+        checkBox3 = (CheckBox) findViewById(R.id.q4_choice3);
+        checkBox4 = (CheckBox) findViewById(R.id.q4_choice4);
         solutions = (TextView) findViewById(R.id.solution_4);
-        if (radioGroup.getCheckedRadioButtonId() == -1) {
+        if (!checkBox1.isChecked() && !checkBox2.isChecked() && !checkBox3.isChecked() && !checkBox4.isChecked()) {
             solutions.setText("No Selected Answer");
+        } else if (!checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked() && !checkBox4.isChecked()) {
+            solutions.setText("True +1 point");
+            score++;
         } else {
-            selected = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (selected.getText().equals("3")) {
-                solutions.setText("True +1 point");
-                score++;
-            } else {
-                solutions.setText("False");
-            }
+            solutions.setText("False");
         }
     }
 
     private void Question5() {
-        radioGroup = (RadioGroup) findViewById(R.id.radio_group_5);
+        free_answer = (EditText) findViewById(R.id.free_answer);
         solutions = (TextView) findViewById(R.id.solution_5);
-        if (radioGroup.getCheckedRadioButtonId() == -1) {
+        if (free_answer.getText().toString().equals("")) {
             solutions.setText("No Selected Answer");
+        } else if (free_answer.getText().toString().equals("149.6")) {
+            solutions.setText("True +1 point");
+            score++;
         } else {
-            selected = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (selected.getText().equals("720")) {
-                solutions.setText("True +1 point");
-                score++;
-            } else {
-                solutions.setText("False");
-            }
+            solutions.setText("False");
         }
     }
 }

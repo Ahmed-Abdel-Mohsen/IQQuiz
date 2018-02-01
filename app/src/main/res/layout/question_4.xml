@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/relative_layout">
+
+        <TextView
+            android:id="@+id/question4_num"
+            style="@style/question_number_textview"
+            android:text="@string/number4" />
+
+        <TextView
+            style="@style/question_textview"
+            android:layout_toRightOf="@+id/question4_num"
+            android:text="@string/question4" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/q4_choice1"
+        style="@style/radio_button"
+        android:text="@string/question4_choice1" />
+
+    <CheckBox
+        android:id="@+id/q4_choice2"
+        style="@style/radio_button"
+        android:text="@string/question4_choice2" />
+
+    <CheckBox
+        android:id="@+id/q4_choice3"
+        style="@style/radio_button"
+        android:text="@string/question4_choice3" />
+
+    <CheckBox
+        android:id="@+id/q4_choice4"
+        style="@style/radio_button"
+        android:text="@string/question4_choice4" />
+
+    <TextView
+        android:id="@+id/solution_4"
+        style="@style/solution" />
+
+</LinearLayout>
